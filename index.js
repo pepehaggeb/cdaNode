@@ -19,6 +19,6 @@ mongoose.connect("mongodb+srv://crudTest:crudTest@crudtestedb.eoulb.mongodb.net/
 app.use('/api', AuthRouter)
 app.use('/codigo', CodigoRouter)
 
-app.listen(3001, () => {
+app.listen(process.env.PORT || 3001, () => {
     console.log("Server running on port 3001")
 })
