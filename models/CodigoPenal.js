@@ -1,5 +1,10 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema
+const format = require('date-fns/format')
+
+const DateOne = new Date().toISOString()
+const DateCorrigido = format(new Date(DateOne), 'dd/MM/yy')
+console.log(DateCorrigido)
 
 const codigoSchema = new Schema({
     name: {
@@ -19,6 +24,10 @@ const codigoSchema = new Schema({
     status:{
         type: Number,
     },
+    created_at: {
+        type: String,
+        default: DateCorrigido,
+    }
 })
 
 const Codigo = mongoose.model('Codigo', codigoSchema)
