@@ -18,6 +18,10 @@ const codigoSchema = new Schema({
     },
     status:{
         type: Number,
+    },
+    created_at: {
+        type: Date,
+        default: "now()",
     }
 })
 
