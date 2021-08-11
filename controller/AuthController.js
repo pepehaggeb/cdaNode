@@ -56,7 +56,7 @@ const login = (req, res) => {
         })
         } else {
             res.json({
-                message: 'Usuario não encontrado!',
+                message: 'Usuario e senha não correspondem!',
             })
         }
     })
