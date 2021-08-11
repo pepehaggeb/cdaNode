@@ -17,7 +17,7 @@ const addCodigo = async (req, res) => {
     })
     .catch(error => {
         res.json({
-            message: 'Um erro ocorreu! Tente novamente!'
+            message: `Um erro ocorreu! Tente novamente!${error}`
         })
     })
 }
