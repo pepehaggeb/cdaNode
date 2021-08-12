@@ -22,7 +22,7 @@ const codigoSchema = new Schema({
         default: 0,
     },
     status:{
-        type: Number,
+        type: Boolean,
     },
     created_at: {
         type: String,
